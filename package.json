@@ -1,9 +1,28 @@
 {
   "name": "stretch-project-1",
   "version": "0.0.0",
-  "description": "",
   "devDependencies": {
     "eslint": "^3.19.0",
-    "eslint-config-lighthouselabs": "lighthouse-labs/eslint-config-lighthouselabs"
-  }
+    "eslint-config-lighthouselabs": "github:lighthouse-labs/eslint-config-lighthouselabs"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "sass": "^1.23.0"
+  },
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andyzen619/Bar-Chart-Library.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andyzen619/Bar-Chart-Library/issues"
+  },
+  "homepage": "https://github.com/andyzen619/Bar-Chart-Library#readme",
+  "description": ""
 }
