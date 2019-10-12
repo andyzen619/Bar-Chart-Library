@@ -12,6 +12,18 @@ function drawBarChart(data, options, element) {
     let chartTitle = $("<dt></dt>").text(options.title);
     chartContainer.append(chartTitle);
 
+    data.forEach(function(element) {
+      let bar = $("<dd></dd>");
+      bar.addClass("percentage");
+      bar.addClass("percentage-" + toPercentage(element, options.width));
+
+      let label = $("<span>" + element + "</span>");
+      label.addClass('text');
+      bar.append(label);
+
+      chartContainer.append(bar);
+    });
+
   });
 }
 
@@ -29,4 +41,15 @@ function getMax(array) {
   return maxItem;
 }
 
-drawBarChart([11, 22, 33], { width: 100, height: 50, title: "Test 1" }, null);
+/**
+ *
+ * @param {int} value of data point in data array
+ * @param {int} width of chart provided in options object
+ */
+function toPercentage(value, width) {
+  let percentage = (value / width) * 100;
+  return Math.ceil(percentage);
+
+}
+
+drawBarChart([91, 22, 3], { width: 100, height: 50, title: "My bar chart" }, null);
